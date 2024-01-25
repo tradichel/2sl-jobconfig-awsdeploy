@@ -29,3 +29,5 @@ set_ssm_parameter_job_config(){
        --tier $tier --type $parmtype $useprofile
   fi
 }
+
+
