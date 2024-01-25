@@ -1,7 +1,4 @@
 env=dev
 region=us-east-2
-cf_param_parentid=:get_id:organization:organizationalunit:root
-
-
-
+cf_param_parentid=:get_id:organizations:organizationalunit:root
 
