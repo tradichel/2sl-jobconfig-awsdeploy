@@ -1,9 +1,9 @@
 #!/bin/bash -e
 #configure job
-source container/resources/ssm/parameter/parameter_functions.sh
-source container/resources/organizations/account/account_functions.sh
+source ../2sl-jobexecframework/resources/ssm/parameter/parameter_functions.sh
+source ../2sl-jobexecframework/resources/organizations/account/account_functions.sh
 
-config_dir="ssm_job_config"
+config_dir="."
 
 #############
 # Get role to use to deploy job configuration
@@ -40,7 +40,7 @@ echo -e "\nEnter job role: "
 read jobrole
 
 #############
-# Get the job role
+# Get the job name
 #############
 echo -e "\nJobs:";
 ls $config_dir/$container/$jobrole
