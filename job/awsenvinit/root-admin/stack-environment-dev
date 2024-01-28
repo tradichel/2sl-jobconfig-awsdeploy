@@ -1,101 +1,101 @@
 Sequential:
   /job/awsenvinit/dev/organizations-organizationalunit-dev
-  	- env=dev
-  	- region=us-east-2
-  	- cfparamParentid=:get_id:organizations:organizationalunit:root
+  	env=dev
+  	region=us-east-2
+  	cfparamParentid=:get_id:organizations:organizationalunit:root
 Parallel:
   /job/awsenvinit/dev/organizations-organizationalunit-governance
-   	- env=dev
-   	- region=us-east-2
-  	- cfparamParentid=:get_id:organizations:organizationalunit:dev
+   	env=dev
+   	region=us-east-2
+  	cfparamParentid=:get_id:organizations:organizationalunit:dev
   /job/awsenvinit/dev/organizations-organizationalunit-apps
-    - env=dev
-    - region=us-east-2
-    - cfparamParentid=:get_id:organizations:organizationalunit:dev
+    env=dev
+    region=us-east-2
+    cfparamParentid=:get_id:organizations:organizationalunit:dev
   /job/awsenvinit/dev/organizations-organizationalunit-resources
-    - env=dev
-    - region=us-east-2
-    - cfparamParentid=:get_id:organizations:organizationalunit:dev
+    env=dev
+    region=us-east-2
+    cfparamParentid=:get_id:organizations:organizationalunit:dev
 Parallel:
   /job/awsenvinit/dev/organizations-account-iam
-  	- env=dev
-  	- region=us-east-2
-		- cfparamParentIds=:get_id:organizations:organizationalunit:governance
-		- cfparamDomain=:ssm:domain
-  	- cfparamEnv=dev
-    - cfparamOrg=:ssm:org
+  	env=dev
+  	region=us-east-2
+		cfparamParentIds=:get_id:organizations:organizationalunit:governance
+		cfparamDomain=:ssm:domain
+  	cfparamEnv=dev
+    cfparamOrg=:ssm:org
   /job/awsenvinit/dev/organizations-account-jobs
-    - env=dev
-    - region=us-east-2
-    - cfparamParentIds=:get_id:organizations:organizationalunit:apps
-    - cfparamDomain=:ssm:domain
-		- cfparamEnv=dev
-    - cfparamOrg=:ssm:org
+    env=dev
+    region=us-east-2
+    cfparamParentIds=:get_id:organizations:organizationalunit:apps
+    cfparamDomain=:ssm:domain
+		cfparamEnv=dev
+    cfparamOrg=:ssm:org
   /job/awsenvinit/dev/organizations-account-kms
-    - env=dev
-    - region=us-east-2
-    - cfparamParentIds=:get_id:organizations:organizationalunit:resources
-    - cfparamDomain=:ssm:domain
-    - cfparamEnv=dev
-    - cfparamOrg=:ssm:org
+    env=dev
+    region=us-east-2
+    cfparamParentIds=:get_id:organizations:organizationalunit:resources
+    cfparamDomain=:ssm:domain
+    cfparamEnv=dev
+    cfparamOrg=:ssm:org
 Parallel:
   /job/awsenvinit/dev/iam-user-iamadmin
-   - env=dev
-   - region=us-east-2
-   - account=dev-iam
+   env=dev
+   region=us-east-2
+   account=dev-iam
   /job/awsenvinit/dev/iam-user-kmsadmin
-    - env=dev
-    - region=us-east-2
-    - account=dev-iam
+    env=dev
+    region=us-east-2
+    account=dev-iam
   /job/awsenvinit/dev/iam-user-orgadmin
-    - env=dev
-    - region=us-east-2
-    - account=dev-iam
+    env=dev
+    region=us-east-2
+    account=dev-iam
 Parallel:
   /job/awsenvinit/dev/iam-group-iamadmingroup
-   - env=dev
-   - region=us-east-2
-   - account=dev-iam
+   env=dev
+   region=us-east-2
+   account=dev-iam
   /job/awsenvinit/dev/iam-group-kmsadmingroup
-    - env=dev
-    - region=us-east-2
-    - account=dev-iam
+    env=dev
+    region=us-east-2
+    account=dev-iam
   /job/awsenvinit/dev/iam-group-orgadmingroup
-    - env=dev
-    - region=us-east-2
-    - account=dev-iam
+    env=dev
+    region=us-east-2
+    account=dev-iam
 Parallel:
   /job/awsenvinit/dev/iam-role-iamadminrole
-   - env=dev
-   - region=us-east-2
-   - account=dev-iam
+    env=dev
+    region=us-east-2
+    account=dev-iam
   /job/awsenvinit/dev/iam-role-kmsadminrole
-    - env=dev
-    - region=us-east-2
-    - account=dev-iam
+    env=dev
+    region=us-east-2
+    account=dev-iam
   /job/awsenvinit/dev/iam-role-orgadminrole
-    - env=dev
-    - region=us-east-2
-    - account=dev-iam
+    env=dev
+    region=us-east-2
+    account=dev-iam
 Parallel:
   /job/awsenvinit/dev/iam-policy-iamadminrolepolicy
-   - env=dev
-   - region=us-east-2
-   - account=dev-iam
+   env=dev
+   region=us-east-2
+   account=dev-iam
   /job/awsenvinit/dev/iam-policy-kmsadminrolepolicy
-    - env=dev
-    - region=us-east-2
-    - account=dev-iam
+    env=dev
+    region=us-east-2
+    account=dev-iam
   /job/awsenvinit/dev/iam-policy-orgadminrolepolicy
-    - env=dev
-    - region=us-east-2
-    - account=dev-iam
+    env=dev
+    region=us-east-2
+    account=dev-iam
 Parallel:
   /job/awsenvinit/dev/kms-key-dev
-    - env=dev
-    - region=us-east-2
-    - account=dev-kms
+    env=dev
+    region=us-east-2
+    account=dev-kms
   /job/awsenvinit/dev/kms-alias-dev
-    - env=dev
-    - region=us-east-2
-    - account=dev-kms
+    env=dev
+    region=us-east-2
+    account=dev-kms
